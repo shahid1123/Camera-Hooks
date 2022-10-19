@@ -10,11 +10,11 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
-import Login from './screen/Login';
+import Splash from './screen/Splash';
 import Home from './screen/Home';
 import map from './screen/map'
 import Camera from './screen/Camera';
-import Capture from './screen/Capture'
+
 import {Provider} from 'react-redux';
 import {Store} from './redux/store';
 
@@ -28,7 +28,7 @@ const App = () => {
     <Provider store={Store}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Home"
+          initialRouteName="Splash"
           screenOptions={{
             headerTitleAlign: 'center',
             headerStyle: {
@@ -41,8 +41,8 @@ const App = () => {
             },
           }}>
           <Stack.Screen
-            name="Login"
-            component={Login}
+            name="Splash"
+            component={Splash}
             options={{
               headerShown: false,
             }}
